@@ -1,0 +1,52 @@
+Senior Backend Engineer — Data Platform
+
+We're looking for a Senior Backend Engineer to join our Data Platform team.
+
+Requirements:
+- 5+ years of experience building scalable backend systems
+- Strong proficiency in Python and Go
+- Deep experience with distributed systems and microservices architecture
+- Hands-on experience with Kubernetes and Docker in production
+- Experience with Apache Kafka or similar event streaming platforms
+- Solid understanding of PostgreSQL and database optimization
+- Experience with AWS (EC2, S3, Lambda, RDS)
+- Familiarity with CI/CD pipelines (GitHub Actions, Jenkins, or similar)
+- Strong communication skills and ability to mentor junior engineers
+- Experience with observability tools (Prometheus, Grafana, Datadog)
+
+Nice to have:
+- Experience with GraphQL
+- Contributions to open-source projects
+- Experience with Terraform or other IaC tools
+
+
+
+
+
+
+
+
+
+# Jordan Lee
+Backend Engineer
+
+## Experience
+
+### Backend Engineer, TechCorp Inc. (2021–Present)
+- Responsible for maintaining backend services for the company's main product
+- Worked on improving the performance of the API
+- Helped with migrating some services to a new infrastructure
+- Involved in on-call rotation and fixing production issues
+- Was responsible for writing documentation for the team
+
+### Software Engineer, StartupXYZ (2019–2021)
+- Built REST APIs using Python and Flask
+- Used Docker for containerizing applications
+- Worked with PostgreSQL database for storing application data
+- Collaborated with frontend team on feature development
+
+## Skills
+Python, Flask, Docker, PostgreSQL, Git, REST APIs
+
+## Education
+B.S. Computer Science, State University (2019)

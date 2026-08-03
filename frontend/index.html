@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCAN // Resume-to-JD Alignment Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">▌Hire<span class="logo-accent">.Sense</span></span>
+    <span class="tagline">Make your resume stand out</span>
+  </header>
+
+  <main class="container">
+    <section class="grid-2">
+      <div class="panel" id="jd-panel">
+        <div class="panel-header">
+          <span>INPUT_A · JOB_DESCRIPTION</span>
+          <span id="jd-count" class="muted">0 chars</span>
+        </div>
+        <textarea id="jd-input" placeholder="Paste the job description here..." spellcheck="false"></textarea>
+      </div>
+
+      <div class="panel" id="resume-panel">
+        <div class="panel-header">
+          <span>INPUT_B · RESUME.MD</span>
+          <div class="header-actions">
+            <button id="pdf-btn" class="ghost-btn xray-btn">GENERATE PDF</button>
+            <button id="xray-toggle-btn" class="ghost-btn xray-btn hidden">X-RAY VIEW: OFF</button>
+            <span id="resume-count" class="muted">0 chars</span>
+          </div>
+        </div>
+        <textarea id="resume-input" placeholder="Paste your resume in Markdown, e.g.&#10;&#10;## Experience&#10;- Responsible for managing a team..." spellcheck="false"></textarea>
+        <div id="xray-overlay" class="xray-overlay hidden"></div>
+        <div id="scan-beam" class="scan-beam hidden"></div>
+      </div>
+    </section>
+
+    <div class="scan-row">
+      <button id="scan-btn" class="scan-btn">RUN_SCAN →</button>
+    </div>
+
+    <section id="loading-state" class="loading-state hidden">
+      <div class="scan-beam"></div>
+      <span class="pulse-soft live-dot">● LIVE SCAN IN PROGRESS</span>
+      <p id="loading-message" class="muted">Parsing job description…</p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="panel score-panel">
+        <div class="panel-header">
+          <span>SIGNAL_STRENGTH · ALIGNMENT</span>
+          <span class="score-value-row">
+            <span id="score-delta" class="score-delta hidden"></span>
+            <span id="score-value" class="score-value">0%</span>
+          </span>
+        </div>
+        <div id="score-bars" class="score-bars"></div>
+        <p id="score-summary" class="muted summary-text"></p>
+      </div>
+
+      <div class="grid-3">
+        <div class="panel kw-col" id="matched-col">
+          <div class="panel-header col-matched"><span>MATCHED</span><span id="matched-count" class="muted"></span></div>
+          <ul class="kw-list" id="matched-list"></ul>
+        </div>
+        <div class="panel kw-col" id="weak-col">
+          <div class="panel-header col-weak"><span>WEAKLY EMPHASIZED</span><span id="weak-count" class="muted"></span></div>
+          <ul class="kw-list" id="weak-list"></ul>
+        </div>
+        <div class="panel kw-col" id="missing-col">
+          <div class="panel-header col-missing"><span>MISSING</span><span id="missing-count" class="muted"></span></div>
+          <ul class="kw-list" id="missing-list"></ul>
+        </div>
+      </div>
+
+      <div class="rewrites-header">
+        <span class="muted" id="rewrites-count-label">BULLET REWRITES</span>
+        <div class="header-actions">
+          <button id="apply-rescan-btn" class="ghost-btn accent-btn hidden">APPLY REWRITES & RESCAN</button>
+          <button id="copy-all-btn" class="ghost-btn">COPY ALL REWRITES</button>
+        </div>
+      </div>
+      <div id="stream-console" class="stream-console hidden">
+        <div class="stream-console-header">
+          <span class="pulse-soft">● GEMINI STREAMING</span>
+        </div>
+        <pre id="stream-console-text" class="stream-console-text"></pre>
+      </div>
+      <div id="rewrites-list" class="rewrites-list"></div>
+    </section>
+
+    <section id="pdf-section" class="pdf-section hidden">
+      <div class="panel-header">
+        <span>LIVE_PDF · RESUME_PREVIEW</span>
+        <div class="header-actions">
+          <a id="pdf-download-link" class="ghost-btn accent-btn" download="resume.pdf" href="#">DOWNLOAD PDF</a>
+        </div>
+      </div>
+      <iframe id="pdf-frame" class="pdf-frame" title="Resume PDF preview"></iframe>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
