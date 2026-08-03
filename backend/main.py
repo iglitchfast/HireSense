@@ -1,10 +1,10 @@
 import os
-from pathlib import Path
+#*from pathlib import Path
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+#*from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
 
@@ -23,5 +23,5 @@ app.include_router(analyze.router)
 app.include_router(rewrite.router)
 app.include_router(export.router)
 
-FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
-app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
+#*FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+#*app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
