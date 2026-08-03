@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
 
-from backend.gemini_client import call_gemini_structured
-from backend.prompts import PASS1_SYSTEM_PROMPT, build_pass1_user_prompt
-from backend.schemas import AnalyzeRequest, GEMINI_KEYWORD_ANALYSIS_SCHEMA, KeywordAnalysisResult
+from app.gemini_client import call_gemini_structured
+from app.prompts import PASS1_SYSTEM_PROMPT, build_pass1_user_prompt
+from app.schemas import AnalyzeRequest, GEMINI_KEYWORD_ANALYSIS_SCHEMA, KeywordAnalysisResult
 
 router = APIRouter()
 

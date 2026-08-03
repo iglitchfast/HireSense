@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import Response
 from pydantic import BaseModel
 
-from backend.pdf_export import markdown_resume_to_pdf_bytes
+from app.pdf_export import markdown_resume_to_pdf_bytes
 
 router = APIRouter()
 

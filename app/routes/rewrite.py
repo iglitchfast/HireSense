@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 
-from backend.gemini_client import call_gemini_structured, stream_gemini_text
-from backend.prompts import PASS2_SYSTEM_PROMPT, build_pass2_user_prompt
-from backend.schemas import BulletRewriteResult, GEMINI_BULLET_REWRITE_SCHEMA, RewriteRequest
+from app.gemini_client import call_gemini_structured, stream_gemini_text
+from app.prompts import PASS2_SYSTEM_PROMPT, build_pass2_user_prompt
+from app.schemas import BulletRewriteResult, GEMINI_BULLET_REWRITE_SCHEMA, RewriteRequest
 
 router = APIRouter()
 

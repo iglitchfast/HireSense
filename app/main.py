@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-from backend.routes import analyze, export, rewrite  # noqa: E402
+from app.routes import analyze, export, rewrite  # noqa: E402
 
 app = FastAPI(title="Resume-to-JD Alignment Assistant")
 

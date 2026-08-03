@@ -15,4 +15,4 @@ if [ ! -f ".env" ]; then
 fi
 
 echo "Starting server at http://localhost:8000"
-uvicorn backend.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8000
